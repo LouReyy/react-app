@@ -8,11 +8,13 @@ import Product from "../pages/Product";
 
 function Home() {
   let items_vetements = [
-    "Hauts & T-shirts",
+    "T-shirts",
     "Sweats à capuche & Sweats",
     "Pantalons & Leggings",
     "Vestes",
   ];
+
+  let brand = ["Nike", "Adidas"];
 
   const handleSelectItem = (item: string) => {
     console.log(item);
@@ -63,7 +65,7 @@ function Home() {
 
         <div className="list-group-container">
           <ListGroup
-            items={items_vetements}
+            items={brand}
             heading="Marques"
             onSelectItem={handleSelectItem}
           ></ListGroup>

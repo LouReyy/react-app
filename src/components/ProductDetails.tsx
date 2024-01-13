@@ -18,6 +18,8 @@ const YourComponent = () => {
         ?product ex:productBrand "Nike" .
         ?product ex:productName ?productName .
         ?product ex:image ?productURL
+        ?product ex:image ?productURL
+
       }
     `;
 

@@ -1,0 +1,135 @@
+
+body{
+  background-color: black;
+}
+.header {
+  background-color: #333;
+  color: #fff;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.header h1{
+  font-weight: bolder;
+  flex: 1;
+}
+
+.navbar {
+  position: relative;
+  margin-right: 70%;
+  box-sizing: border-box;
+}
+
+
+
+
+.button {
+  background-color: #ffd700;
+  color: #333;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.main_list_container {
+  background-color: #0e0d0d;
+  color: #fff;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  padding: auto;
+  margin-top: auto;
+
+}
+
+.heading-container{
+  position: absolute;
+}
+
+.list-group-container {
+  margin: auto;
+  padding: 0%;
+  align-items: center;
+  margin-top: 1%;
+
+}
+
+.list-group-container h1:hover {
+  color: #0b84c1; 
+}
+
+.list-group-container h1 {
+  font-weight: 200;
+  font-size: larger;
+  position: relative;
+}
+
+.list-group-item {
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.list-group-item:hover {
+  background-color: #b0adad; 
+}
+
+.list-group-item.active {
+  background-color: #0084ff; 
+}
+
+.list-group {
+  width: 200px; 
+  margin: auto;
+  margin-left: -20%;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.list-group h1 {
+  font-weight: 200;
+  font-size: larger;
+}
+
+.genre_image-container{
+  display: flex;
+  width: 94%; 
+  height: 5%;
+  margin: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
+  flex-direction: row;
+  padding: auto;
+  box-sizing: border-box;
+
+}
+
+.image-block:hover {
+  background-color: #b0adad; 
+}
+
+.image-block{
+  width: 100%;
+  text-align: center;
+  margin-left: 2%;
+  border-radius: 10px;
+
+}
+
+.text-overlay{
+  font-weight: lighter;
+  font-size: 40px;
+  color: white;
+}
+
+.text-overlay:hover {
+  color: #0b84c1; 
+}
+

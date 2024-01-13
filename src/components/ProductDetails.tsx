@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 interface SparqlResult {
   product: { value: string };
   productName: { value: string };
-  productURL: { value: string }; // Corrected property name
+  productURL: { value: string };
 }
 
 const YourComponent = () => {
@@ -44,14 +44,18 @@ const YourComponent = () => {
   return (
     <div>
       <h2>SPARQL Query Results:</h2>
-      <ul>
+      <div>
         {data.map((result, index) => (
-          <li key={index}>
-            Product: {result.product.value}, Name: {result.productName.value},
-            URL: {result.productURL.value} {/* Corrected property name */}
-          </li>
+          <div key={index}>
+            <h3>Product: {result.productName.value}</h3>
+            <img
+              src={result.productURL.value}
+              alt={result.productName.value}
+              style={{ maxWidth: "200px", maxHeight: "200px" }}
+            />
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

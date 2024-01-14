@@ -1,25 +1,14 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import ListGroup from "../components/ListGroup";
 import Navbar from "../components/Navbar";
 import myImage from "../../public/running.jpg";
 import backgroundImage from "../../public/black_background.jpg";
 import Product from "../pages/Product";
+import Header from "../components/Header";
 
 function Home() {
-  let items_vetements = [
-    "T-shirts",
-    "Sweats à capuche & Sweats",
-    "Pantalons & Leggings",
-    "Vestes",
-  ];
-
-  let brand = ["Nike", "Adidas"];
-
-  const handleSelectItem = (item: string) => {
-    console.log(item);
-  };
-
   const [searchResults, setSearchResults] = useState<string[]>([]);
 
   const handleSearch = (query: string) => {
@@ -33,54 +22,31 @@ function Home() {
 
   return (
     <div>
-      <div className="header">
-        <h1>Foot Locker</h1>
-        <Navbar onSearch={handleSearch} />
-      </div>
-
-      <div className="main_list_container">
-        <div className="list-group-container">
-          <ListGroup
-            items={items_vetements}
-            heading="Vetements"
-            onSelectItem={handleSelectItem}
-          ></ListGroup>
-        </div>
-
-        <div className="list-group-container">
-          <ListGroup
-            items={items_vetements}
-            heading="Chaussures"
-            onSelectItem={handleSelectItem}
-          ></ListGroup>
-        </div>
-
-        <div className="list-group-container">
-          <ListGroup
-            items={items_vetements}
-            heading="Accesoires"
-            onSelectItem={handleSelectItem}
-          ></ListGroup>
-        </div>
-
-        <div className="list-group-container">
-          <ListGroup
-            items={brand}
-            heading="Marques"
-            onSelectItem={handleSelectItem}
-          ></ListGroup>
-        </div>
-      </div>
+      <Header></Header>
 
       <div className="genre_image-container">
-        <div className="image-block" style={containerStyle}>
-          <div className="text-overlay">Homme</div>
+        <div className="product_homme">
+          <Link to="/products/item/homme">
+            <div className="image-block" style={containerStyle}>
+              <div className="text-overlay">Homme</div>
+            </div>
+          </Link>
         </div>
-        <div className="image-block" style={containerStyle}>
-          <div className="text-overlay">Femme</div>
+
+        <div className="product_femme">
+          <Link to="/products/item/femme">
+            <div className="image-block" style={containerStyle}>
+              <div className="text-overlay">Femme</div>
+            </div>
+          </Link>
         </div>
-        <div className="image-block" style={containerStyle}>
-          <div className="text-overlay">Enfant</div>
+
+        <div className="product_enfant">
+          <Link to="/products/item/enfant">
+            <div className="image-block" style={containerStyle}>
+              <div className="text-overlay">Enfant</div>
+            </div>
+          </Link>
         </div>
       </div>
 

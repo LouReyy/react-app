@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Product from "./pages/Product";
 import Home from "./pages/Home";
+import Header from "./components/Header";
 
 function App() {
   return (
@@ -15,8 +16,11 @@ function App() {
         <Routes>
           {/* Vos autres routes */}
           {/* Ajoutez :item pour indiquer un paramètre d'URL */}
-          <Route path="/products/:item" element={<Product />} />
+          <Route path="/products/:item/:source" element={<Product />} />
+
           <Route path="/home" element={<Home />} />
+          <Route path="/header" element={<Header />} />
+
           {/* Route par défaut avec redirection vers /home */}
           <Route
             path="*"

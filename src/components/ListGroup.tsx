@@ -13,6 +13,8 @@ function ListGroup({ items, heading, onSelectItem }: Props) {
   const listGroupRef = useRef(null);
   const navigate = useNavigate(); // Hook for programmatic navigation
 
+  let items_brand = ["Nike", "Adidas", "Timberland"];
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -32,9 +34,17 @@ function ListGroup({ items, heading, onSelectItem }: Props) {
 
   const handleItemClick = (item: string, index: number) => {
     setSelectedIndex(index);
-    onSelectItem(item);
-    navigate(`/products/${encodeURIComponent(item)}`);
-    console.log(`/products/${encodeURIComponent(item)}`);
+
+    // Ajoutez une condition pour les marques
+    if (items_brand.includes(item)) {
+      // Redirige vers la page spécifique pour les marques
+      navigate(`/products/${encodeURIComponent(item)}/brand`);
+    } else {
+      // Pour d'autres catégories, appelez la fonction onSelectItem
+      onSelectItem(item);
+      navigate(`/products/${encodeURIComponent(item)}/item`);
+      console.log(`/products/${encodeURIComponent(item)}`);
+    }
   };
 
   return (

@@ -1,27 +1,34 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import ProductDetails from "../components/ProductDetails"; // Import your ProductDetails component
+import ProductDetails from "../components/ProductDetails";
+import Header from "../components/Header";
 
 function Product() {
-  // Utilize the hook useParams to get URL parameters
-  const { item } = useParams();
+  const { item, source } = useParams<{ item: string; source: string }>();
+  const [searchResults, setSearchResults] = useState<string[]>([]);
 
-  // Check if item is defined before using it
-  if (!item) {
-    // If item is not defined, handle the appropriate case here
-    return <div>Item not found</div>;
-  }
+  useEffect(() => {
+    // Use the item parameter if available
+    if (item) {
+      setSearchResults([decodeURIComponent(item)]);
+    }
+
+    // Check the source parameter to determine the source of the item
+    if (source === "search") {
+      console.log("Item from search:", item);
+    } else {
+      setSearchResults([]);
+    }
+  }, [item, source]);
+
+  console.log("test dans Product", searchResults, source);
 
   return (
     <div>
-      {/* Your product-specific JSX */}
-      <h2>Product Page</h2>
-      {/* Display the retrieved URL parameter */}
-      <p>Item Name: {decodeURIComponent(item)}</p>
-      {/* Add your product-related content here */}
-
-      {/* Call the ProductDetails component with the item parameter */}
-      <ProductDetails />
+      <Header
+        onSearch={(query: string, source: string) => setSearchResults([query])}
+      />
+      <ProductDetails searchResults={searchResults} />
     </div>
   );
 }

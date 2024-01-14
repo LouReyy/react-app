@@ -1,8 +1,9 @@
 
 body{
-  background-color: black;
+  background-color: lightgray;
 }
 .header {
+  z-index: 1000;
   background-color: #333;
   color: #fff;
   height: 60px;
@@ -17,21 +18,27 @@ body{
   flex: 1;
 }
 
+a{
+  color: white;
+  text-decoration: none;
+}
+
 .navbar {
   position: relative;
-  margin-right: 70%;
+  margin-right: 1%;
   box-sizing: border-box;
+  border-radius: 5%;
+  font-weight: lighter;
+  font-size: 15px;
 }
 
 
 
 
-.button {
+.navbar button {
   background-color: #ffd700;
   color: #333;
-  padding: 10px 15px;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s ease-in-out;
@@ -47,6 +54,8 @@ body{
   padding: 0 50px;
   padding: auto;
   margin-top: auto;
+  position: absolute;
+  z-index: 11;
 
 }
 
@@ -108,7 +117,23 @@ body{
   flex-direction: row;
   padding: auto;
   box-sizing: border-box;
+  margin-top: 5%;
 
+}
+
+.product_homme{
+  width: 20%;
+  margin-left: 10%;
+}
+
+.product_femme{
+  width: 20%;
+  margin-left: 10%;
+}
+
+.product_enfant{
+  width: 20%;
+  margin-left: 10%;
 }
 
 .image-block:hover {

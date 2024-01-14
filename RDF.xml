@@ -1,0 +1,1553 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:ex="http://example.org/">
+
+  <!-- Définition des classes -->
+  <rdf:Description rdf:about="http://example.org/ontology#Product">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Product</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/ontology#Brand">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Brand</rdfs:label>
+  </rdf:Description>
+
+  <!-- Définition de la relation isMadeBy -->
+  <rdf:Description rdf:about="http://example.org/ontology#isMadeBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label>isMadeBy</rdfs:label>
+    <rdfs:domain rdf:resource="http://example.org/ontology#Product"/>
+    <rdfs:range rdf:resource="http://example.org/ontology#Brand"/>
+  </rdf:Description>
+
+  <!-- Marque Nike -->
+  <rdf:Description rdf:about="http://example.org/resource/brand/nike">
+    <rdf:type rdf:resource="http://example.org/ontology#Brand"/>
+    <rdfs:label>Nike</rdfs:label>
+    <ex:brandName>Nike</ex:brandName>
+    <ex:logoURL>https://upload.wikimedia.org/wikipedia/fr/thumb/8/8e/Swoosh.svg/1200px-Swoosh.svg.png</ex:logoURL>
+  </rdf:Description>
+
+  <!-- Marque Adidas -->
+  <rdf:Description rdf:about="http://example.org/resource/brand/adidas">
+    <rdf:type rdf:resource="http://example.org/ontology#Brand"/>
+    <rdfs:label>Adidas</rdfs:label>
+    <ex:brandName>Adidas</ex:brandName>
+    <ex:logoURL>https://upload.wikimedia.org/wikipedia/commons/2/24/Adidas_logo.png</ex:logoURL>
+  </rdf:Description>
+
+  <!-- Marque Lacoste -->
+  <rdf:Description rdf:about="http://example.org/resource/brand/lacoste">
+    <rdf:type rdf:resource="http://example.org/ontology#Brand"/>
+    <rdfs:label>Lacoste</rdfs:label>
+    <ex:brandName>Lacoste</ex:brandName>
+    <ex:logoURL>https://assets.stickpng.com/images/58429f65a6515b1e0ad75aed.png</ex:logoURL>
+  </rdf:Description>
+
+    <!-- Marque Timberland -->
+  <rdf:Description rdf:about="http://example.org/resource/brand/timberland">
+    <rdf:type rdf:resource="http://example.org/ontology#Brand"/>
+    <rdfs:label>Timberland</rdfs:label>
+    <ex:brandName>Timberland</ex:brandName>
+    <ex:logoURL>https://upload.wikimedia.org/wikipedia/commons/e/e8/Timberland-logo.png</ex:logoURL>
+  </rdf:Description>
+
+
+  <!-- Produits NIKE -->
+  <!-- T-SHirt NIKE -->
+  <rdf:Description rdf:about="http://example.org/resource/product/14000001">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Vetement</ex:productType>
+    <ex:type>T-Shirt</ex:type>
+    <ex:productName>Nike Dri-FIT Team (MLB Minnesota Twins)</ex:productName>
+    <ex:productBrand>Nike</ex:productBrand>
+    <ex:model>14000001</ex:model>
+    <ex:mainColor>Blue</ex:mainColor>
+    <ex:secondaryColor>Red</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">40.0</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>S | M | L | XL | 2XL</ex:available_sizes>
+    <ex:image>https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/199e0750-f773-463f-be35-291401f0dbdb/minnesota-twins-2023-postseason-dugout-mens-dri-fit-t-shirt-65qrRj.png</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/nike"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/14000002">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Vetement</ex:productType>
+    <ex:type>T-Shirt</ex:type>
+    <ex:productName>Nike SB</ex:productName>
+    <ex:productBrand>Nike</ex:productBrand>
+    <ex:model>14000002</ex:model>
+    <ex:mainColor>White</ex:mainColor>
+    <ex:secondaryColor>Red</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">39.99</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>XS | S | M | L</ex:available_sizes>
+    <ex:image>https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/6aec8da1-e566-4bf5-b074-45f9642a3aaa/t-shirt-de-skateboard-sb-VqFVCS.png</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/nike"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/14000003">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Vetement</ex:productType>
+    <ex:type>T-Shirt</ex:type>
+    <ex:productName>Nike Sportwear Club</ex:productName>
+    <ex:productBrand>Nike</ex:productBrand>
+    <ex:model>14000003</ex:model>
+    <ex:mainColor>White</ex:mainColor>
+    <ex:secondaryColor>Black</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">29.99</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>OutOfStock</ex:availability>
+    <ex:available_sizes>M | L | XL</ex:available_sizes>
+    <ex:image>https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/co8znqngijhgig9gieyf/tee-shirt-a-manches-longues-sportswear-club-pour-cLtl8Z.png</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/nike"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/14000004">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Vetement</ex:productType>
+    <ex:type>Sweat</ex:type>
+    <ex:productName>Nike Therma-FIT One</ex:productName>
+    <ex:productBrand>Nike</ex:productBrand>
+    <ex:model>14000004</ex:model>
+    <ex:mainColor>Black</ex:mainColor>
+    <ex:secondaryColor>White</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">79.99</ex:price>
+    <ex:sex>Femme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>M | L | XL</ex:available_sizes>
+    <ex:image>https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/e353cfb0-a04b-43f3-bf7d-f1895eaf94bf/sweat-a-capuche-et-zip-oversize-en-tissu-fleece-one-pour-hPQXpF.png</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/nike"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/14000005">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Vetement</ex:productType>
+    <ex:type>Sweat</ex:type>
+    <ex:productName>Jordan Brooklyn Fleece</ex:productName>
+    <ex:productBrand>Nike</ex:productBrand>
+    <ex:model>14000005</ex:model>
+    <ex:mainColor>Red</ex:mainColor>
+    <ex:secondaryColor>White</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">64.99</ex:price>
+    <ex:sex>Femme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>L | XL</ex:available_sizes>
+    <ex:image>https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/75023c79-5809-446c-9315-e1b5d9f7d950/sweat-a-col-ras-du-cou-jordan-brooklyn-fleece-pour-SPwT5W.png</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/nike"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/14000006">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Vetement</ex:productType>
+    <ex:type>Sweat</ex:type>
+    <ex:productName>Nike Solo Swoosh</ex:productName>
+    <ex:productBrand>Nike</ex:productBrand>
+    <ex:model>14000006</ex:model>
+    <ex:mainColor>Grey</ex:mainColor>
+    <ex:secondaryColor>White</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">89.99</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>XS | S | M | L | XL</ex:available_sizes>
+    <ex:image>https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/40bb484d-c6d2-4a5c-b86c-f8bc862a635a/haut-en-tissu-fleece-solo-swoosh-pour-Wdc3lX.png</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/nike"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/14000007">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Vetement</ex:productType>
+    <ex:type>T-Shirt</ex:type>
+    <ex:productName>Nike Sportswear Essentials</ex:productName>
+    <ex:productBrand>Nike</ex:productBrand>
+    <ex:model>14000007</ex:model>
+    <ex:mainColor>Pink</ex:mainColor>
+    <ex:secondaryColor>White</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">32.99</ex:price>
+    <ex:sex>Femme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>XS | S | M | L</ex:available_sizes>
+    <ex:image>https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/1dd730ef-b2bd-4adc-bd4e-5726665b751b/tee-shirt-a-logo-sportswear-essentials-pour-Dn6KNq.png</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/nike"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/14000008">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Vetement</ex:productType>
+    <ex:type>T-Shirt</ex:type>
+    <ex:productName>Nike Sportswear Essentials</ex:productName>
+    <ex:productBrand>Nike</ex:productBrand>
+    <ex:model>14000008</ex:model>
+    <ex:mainColor>White</ex:mainColor>
+    <ex:secondaryColor>Black</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">32.99</ex:price>
+    <ex:sex>Femme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>XS | S | M | L</ex:available_sizes>
+    <ex:image>https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/f7e83a33-88dd-4925-896f-e4d42c6ec39d/tee-shirt-a-logo-sportswear-essentials-pour-Dn6KNq.png</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/nike"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/14000009">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Vetement</ex:productType>
+    <ex:type>Sweat</ex:type>
+    <ex:productName>Jordan Brooklyn Fleece</ex:productName>
+    <ex:productBrand>Nike</ex:productBrand>
+    <ex:model>14000009</ex:model>
+    <ex:mainColor>Black</ex:mainColor>
+    <ex:secondaryColor>White</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">64.99</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>S | M | L | XL</ex:available_sizes>
+    <ex:image>https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/b4b104f2-9de2-4407-9a65-8b9040da1107/sweat-a-col-ras-du-cou-jordan-brooklyn-fleece-pour-lw14Ft.png</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/nike"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/14000010">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Vetement</ex:productType>
+    <ex:type>Sweat</ex:type>
+    <ex:productName>Jordan Brooklyn Fleece</ex:productName>
+    <ex:productBrand>Nike</ex:productBrand>
+    <ex:model>14000010</ex:model>
+    <ex:mainColor>Red</ex:mainColor>
+    <ex:secondaryColor>Red</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">64.99</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>S | M | L | XL</ex:available_sizes>
+    <ex:image>https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/23ee1bcc-e7c9-4a0a-a91b-6866f50f98c9/sweat-a-col-ras-du-cou-jordan-brooklyn-fleece-pour-lw14Ft.png</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/nike"/>
+  </rdf:Description>
+
+
+  <!--  Chaussure NIKE -->
+
+  <rdf:Description rdf:about="http://example.org/resource/product/14000101">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Chaussures</ex:productType>
+    <ex:type>Sneakers</ex:type>
+    <ex:productName>Nike Dunk Low</ex:productName>
+    <ex:productBrand>Nike</ex:productBrand>
+    <ex:model>14000101</ex:model>
+    <ex:mainColor>White</ex:mainColor>
+    <ex:secondaryColor>Grey</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">129.99</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>38 | 39 | 40 | 41 | 42 | 43 | 44</ex:available_sizes>
+    <ex:image>https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/5fea6277-542a-4e77-9176-2e97117b9f0a/chaussure-dunk-low-pour-ms4ZDc.png</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/nike"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/14000102">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Chaussures</ex:productType>
+    <ex:type>Sneakers</ex:type>
+    <ex:productName>Nike Air Force 1 Low Retro</ex:productName>
+    <ex:productBrand>Nike</ex:productBrand>
+    <ex:model>14000102</ex:model>
+    <ex:mainColor>White</ex:mainColor>
+    <ex:secondaryColor>Red</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">150</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>38 | 39 | 40 | 41 | 42 | 43 | 44</ex:available_sizes>
+    <ex:image>https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/10da3c91-9deb-4264-ba81-1e6b7a5ccc68/chaussure-air-force-1-low-retro-pour-nlcfzr.png</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/nike"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/14000103">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Chaussures</ex:productType>
+    <ex:type>Sneakers</ex:type>
+    <ex:productName>Air Jordan 1 Low</ex:productName>
+    <ex:productBrand>Nike</ex:productBrand>
+    <ex:model>14000103</ex:model>
+    <ex:mainColor>Black</ex:mainColor>
+    <ex:secondaryColor>Red</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">129.99</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>OutOfStock</ex:availability>
+    <ex:available_sizes>38 | 39 | 40 | 41 | 42 | 43 | 44</ex:available_sizes>
+    <ex:image>https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/abeb20f9-baf1-42b4-84c2-20c4df54621c/chaussure-air-jordan-1-low-pour-WgK3MP.png</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/nike"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/14000104">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Chaussures</ex:productType>
+    <ex:type>Sneakers</ex:type>
+    <ex:productName>Nike Air Max Plus</ex:productName>
+    <ex:productBrand>Nike</ex:productBrand>
+    <ex:model>14000104</ex:model>
+    <ex:mainColor>Blue</ex:mainColor>
+    <ex:secondaryColor>Black</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">189.99</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>38 | 39 | 40 | 41 | 42 | 43 | 44</ex:available_sizes>
+    <ex:image>https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/4265ac64-5165-4029-95f9-5ed3f4776e44/chaussure-air-max-plus-pour-Q1wtBk.png</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/nike"/>
+  </rdf:Description>
+
+
+  <rdf:Description rdf:about="http://example.org/resource/product/14000105">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Chaussures</ex:productType>
+    <ex:type>Sneakers</ex:type>
+    <ex:productName>Nike Air Force 1 '07</ex:productName>
+    <ex:productBrand>Nike</ex:productBrand>
+    <ex:model>14000105</ex:model>
+    <ex:mainColor>White</ex:mainColor>
+    <ex:secondaryColor>Orange</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">119.99</ex:price>
+    <ex:sex>Femme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>38 | 39 | 40 | 41 | 42 </ex:available_sizes>
+    <ex:image>https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/cea4d2b7-5bdd-4172-853c-6357c0e30664/chaussure-air-force-1-07-pour-3RD8Zk.png</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/nike"/>
+  </rdf:Description>
+
+
+  <rdf:Description rdf:about="http://example.org/resource/product/14000106">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Chaussures</ex:productType>
+    <ex:type>Sneakers</ex:type>
+    <ex:productName>Nike Court Vision Low Next Nature</ex:productName>
+    <ex:productBrand>Nike</ex:productBrand>
+    <ex:model>14000106</ex:model>
+    <ex:mainColor>White</ex:mainColor>
+    <ex:secondaryColor>Pink</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">79.99</ex:price>
+    <ex:sex>Femme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>38 | 39 | 40 | 41 | 42 | 43 | 44</ex:available_sizes>
+    <ex:image>https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/7cc93bf2-ec9f-4a6e-814c-50802633e578/chaussure-court-vision-low-next-nature-pour-QG8bdf.png</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/nike"/>
+  </rdf:Description>
+
+
+  <rdf:Description rdf:about="http://example.org/resource/product/14000107">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Chaussures</ex:productType>
+    <ex:type>Sneakers</ex:type>
+    <ex:productName>Nike Court Vision Alta</ex:productName>
+    <ex:productBrand>Nike</ex:productBrand>
+    <ex:model>14000107</ex:model>
+    <ex:mainColor>Pink</ex:mainColor>
+    <ex:secondaryColor>White</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">89.99</ex:price>
+    <ex:sex>Femme</ex:sex>
+    <ex:availability>OutOfStock</ex:availability>
+    <ex:available_sizes>38 | 39 | 40 | 41 | 42 | 43 | 44</ex:available_sizes>
+    <ex:image>https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/bd7ac0c4-a06b-4d75-98a5-4481c53cc189/chaussures-court-vision-alta-pour-dh8B4S.png</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/nike"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/14000108">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Chaussures</ex:productType>
+    <ex:type>Sneakers</ex:type>
+    <ex:productName>Nike Air Max Plus</ex:productName>
+    <ex:productBrand>Nike</ex:productBrand>
+    <ex:model>14000108</ex:model>
+    <ex:mainColor>Red</ex:mainColor>
+    <ex:secondaryColor>Black</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">189.99</ex:price>
+    <ex:sex>Femme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>38 | 39 </ex:available_sizes>
+    <ex:image>https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/60961b55-71c8-4f94-bcb3-cf0009eb2ec5/chaussure-air-max-plus-pour-mzL6hp.png</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/nike"/>
+  </rdf:Description>
+
+
+
+
+
+<!--  Accessoires NIKE -->
+  <rdf:Description rdf:about="http://example.org/resource/product/14000301">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Accessoires</ex:productType>
+    <ex:type>Casquette</ex:type>
+    <ex:productName>Nike Rise Cap</ex:productName>
+    <ex:productBrand>Nike</ex:productBrand>
+    <ex:model>14000301</ex:model>
+    <ex:mainColor>Black</ex:mainColor>
+    <ex:secondaryColor>Black</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">27.99</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>TU</ex:available_sizes>
+    <ex:image>https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,b_rgb:f5f5f5/5b5f78f2-3057-401c-adfa-5a06007a1833/casquette-trucker-structuree-rise-cap-KMm1hP.png</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/nike"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/14000302">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Accessoires</ex:productType>
+    <ex:type>Casquette</ex:type>
+    <ex:productName>Casquette Jordan Rise</ex:productName>
+    <ex:productBrand>Nike</ex:productBrand>
+    <ex:model>14000302</ex:model>
+    <ex:mainColor>White</ex:mainColor>
+    <ex:secondaryColor>Grey</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">32.99</ex:price>
+    <ex:sex>Femme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>TU</ex:available_sizes>
+    <ex:image>https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,b_rgb:f5f5f5,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/3bbd9d47-d984-4d1e-ad31-5a76b9db29db/casquette-reglable-jordan-rise-VbMGs8.png</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/nike"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/14000303">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Accessoires</ex:productType>
+    <ex:type>Bonnet</ex:type>
+    <ex:productName>Nike Peak</ex:productName>
+    <ex:productBrand>Nike</ex:productBrand>
+    <ex:model>14000303</ex:model>
+    <ex:mainColor>Grey</ex:mainColor>
+    <ex:secondaryColor>Grey</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">27.99</ex:price>
+    <ex:sex>Femme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>TU</ex:available_sizes>
+    <ex:image>https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/3d7a870a-5371-4847-a429-b2f73e9a11b3/bonnet-a-swoosh-metallique-et-revers-standard-peak-ndrlXc.png</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/nike"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/14000304">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Accessoires</ex:productType>
+    <ex:type>Bonnet</ex:type>
+    <ex:productName>Nike Terra</ex:productName>
+    <ex:productBrand>Nike</ex:productBrand>
+    <ex:model>14000304</ex:model>
+    <ex:mainColor>Black</ex:mainColor>
+    <ex:secondaryColor>Black</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">24.99</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>TU</ex:available_sizes>
+    <ex:image>https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,b_rgb:f5f5f5/20364b49-a889-433d-af2b-8ac2e16a6b43/bonnet-terra-futura-TV0R92.png</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/nike"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/14000305">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Accessoires</ex:productType>
+    <ex:type>Sac</ex:type>
+    <ex:productName>Nike Elemental Premium</ex:productName>
+    <ex:productBrand>Nike</ex:productBrand>
+    <ex:model>14000305</ex:model>
+    <ex:mainColor>Bleu</ex:mainColor>
+    <ex:secondaryColor>White</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">79.99</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>TU</ex:available_sizes>
+    <ex:image>https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/bcde0856-19e2-4605-9972-101056e2e9f2/sac-de-sport-B9R1Tf.png</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/nike"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/14000306">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Accessoires</ex:productType>
+    <ex:type>Sac</ex:type>
+    <ex:productName>Nike Sportswear</ex:productName>
+    <ex:productBrand>Nike</ex:productBrand>
+    <ex:model>14000306</ex:model>
+    <ex:mainColor>Green</ex:mainColor>
+    <ex:secondaryColor>Green</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">94.99</ex:price>
+    <ex:sex>Femme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>TU</ex:available_sizes>
+    <ex:image>https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/7f02fcc8-23b7-4b0e-8995-20bd78180630/tote-bag-sportswear-rpm-mt1xzC.png</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/nike"/>
+  </rdf:Description>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Produits Adidas -->
+<!-- T-SHirt Adidas -->
+  <rdf:Description rdf:about="http://example.org/resource/product/15000001">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Vetement</ex:productType>
+    <ex:type>T-Shirt</ex:type>
+    <ex:productName>T-SHIRT 3 BANDES ADICOLOR CLASSICS</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000001</ex:model>
+    <ex:mainColor>Blue</ex:mainColor>
+    <ex:secondaryColor>White</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">33</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>S | M | L | XL | 2XL</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/70268ea39a8440d4ab8faf12008edd13_9366/T-shirt_3_bandes_Adicolor_Classics_Bleu_IA4850_21_model.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000002">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Vetement</ex:productType>
+    <ex:type>T-Shirt</ex:type>
+    <ex:productName>T-SHIRT 3 BANDES ADICOLOR CLASSICS</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000002</ex:model>
+    <ex:mainColor>White</ex:mainColor>
+    <ex:secondaryColor>Black</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">33</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>S | M | L | XL | 2XL</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/fcc5b5c764f74adcb528af3a00cae485_9366/T-shirt_3_bandes_Adicolor_Classics_Blanc_IA4846_21_model.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000003">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Vetement</ex:productType>
+    <ex:type>T-Shirt</ex:type>
+    <ex:productName>T-SHIRT 3 BANDES ADICOLOR CLASSICS</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000003</ex:model>
+    <ex:mainColor>Green</ex:mainColor>
+    <ex:secondaryColor>White</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">33</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>S | M | L | XL | 2XL</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/5d9e908faef14deda13f603a3573fe44_9366/T-shirt_3_bandes_Adicolor_Classics_Vert_IM9387_21_model.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000004">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Vetement</ex:productType>
+    <ex:type>T-Shirt</ex:type>
+    <ex:productName>T-SHIRT CAMO TRÈFLE</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000004</ex:model>
+    <ex:mainColor>Black</ex:mainColor>
+    <ex:secondaryColor>Grey</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">35</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>S | M | L | XL | 2XL</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/7bd1c197a2ec438696a96dd30f0268b4_9366/T-shirt_Camo_Trefle_Noir_IS2892_01_laydown.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000005">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Vetement</ex:productType>
+    <ex:type>T-Shirt</ex:type>
+    <ex:productName>T-SHIRT OWN THE RUN</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000005</ex:model>
+    <ex:mainColor>Black</ex:mainColor>
+    <ex:secondaryColor>White</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">35</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>S | M | L | XL</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/44e0ffb35ffb47788943a3436a8f1e05_9366/T-shirt_Own_the_Run_Noir_IN1500_21_model.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description> 
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000006">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Vetement</ex:productType>
+    <ex:type>T-Shirt</ex:type>
+    <ex:productName>T-SHIRT 3 BANDES ADICOLOR CLASSICS</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000006</ex:model>
+    <ex:mainColor>Black</ex:mainColor>
+    <ex:secondaryColor>White</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">21</ex:price>
+    <ex:sex>Femme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>S | M | L | XL</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/f7de8cf515cc4600b61b837c15c9c84d_9366/T-shirt_3_bandes_Adicolor_Classics_Noir_IK4049_21_model.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description> 
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000007">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Vetement</ex:productType>
+    <ex:type>T-Shirt</ex:type>
+    <ex:productName>T-SHIRT SLIM COL EN V 3 BANDES</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000007</ex:model>
+    <ex:mainColor>Black</ex:mainColor>
+    <ex:secondaryColor>White</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">33</ex:price>
+    <ex:sex>Femme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>XS | S | M | L</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/36a25ff976004d3588543f2a96372c1f_9366/T-shirt_slim_col_en_V_3_bandes_Noir_IU2416_21_model.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description> 
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000008">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Vetement</ex:productType>
+    <ex:type>T-Shirt</ex:type>
+    <ex:productName>HAUT MANCHES COURTES ADILENIUM</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000008</ex:model>
+    <ex:mainColor>Black</ex:mainColor>
+    <ex:secondaryColor>White</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">33</ex:price>
+    <ex:sex>Femme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>XS | S | M</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/30c3517f76514c21bb1425807e6d063d_9366/Haut_manches_courtes_Adilenium_Noir_IV9323_01_laydown.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>  
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000009">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Vetement</ex:productType>
+    <ex:type>T-Shirt</ex:type>
+    <ex:productName>T-SHIRT 3 BANDES ADICOLOR CLASSICS</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000008</ex:model>
+    <ex:mainColor>White</ex:mainColor>
+    <ex:secondaryColor>Black</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">23</ex:price>
+    <ex:sex>Femme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>XS | S | M</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/38fa341f7100467db17dd3cf9ffceae4_9366/T-shirt_3_bandes_Adicolor_Classics_Blanc_IK4050_01_laydown.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>  
+
+  <!-- PANTALON Adidas -->
+  <rdf:Description rdf:about="http://example.org/resource/product/15000010">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Vetement</ex:productType>
+    <ex:type>Pantalon</ex:type>
+    <ex:productName>PANTALON ULTIMATE365 TAPERED</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000010</ex:model>
+    <ex:mainColor>Blue</ex:mainColor>
+    <ex:secondaryColor>Blue</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">75</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>M | L | XL | 2XL</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/e2874810efff404b8041af1d002f4a14_9366/Pantalon_Ultimate365_Tapered_Bleu_HR9046_21_model.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000011">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Vetement</ex:productType>
+    <ex:type>Pantalon</ex:type>
+    <ex:productName>PANTALON DE SURVÊTEMENT ADICOLOR CLASSICS SST</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000011</ex:model>
+    <ex:mainColor>Green</ex:mainColor>
+    <ex:secondaryColor>White</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">65</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>XS | S | M | 2XL</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/8b62c0c3e30e4dedb1ccb250006524eb_9366/Pantalon_de_survetement_Adicolor_Classics_SST_Vert_IR9886_21_model.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000012">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Vetement</ex:productType>
+    <ex:type>Pantalon</ex:type>
+    <ex:productName>PANTALON ADICOLOR CLASSICS 3-STRIPES</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000012</ex:model>
+    <ex:mainColor>Black</ex:mainColor>
+    <ex:secondaryColor>White</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">42</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>XS | S | M | 2XL</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/eb258a5fb7374a7d9875ac3800f98c0a_9366/Pantalon_Adicolor_Classics_3-Stripes_Noir_GN3458_23_hover_model.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000013">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Vetement</ex:productType>
+    <ex:type>Pantalon</ex:type>
+    <ex:productName>PANTALON TRÈFLE ESSENTIALS</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000013</ex:model>
+    <ex:mainColor>Black</ex:mainColor>
+    <ex:secondaryColor>Black</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">55</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>XS | S | M | L</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/e4333d20bef64a3eaac501cc07c05975_9366/Pantalon_Trefle_Essentials_Noir_IR7798_21_model.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000014">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Vetement</ex:productType>
+    <ex:type>Pantalon</ex:type>
+    <ex:productName>PANTALON DE SURVÊTEMENT MOTIF MONOGRAMME FIREBIRD</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000014</ex:model>
+    <ex:mainColor>Black</ex:mainColor>
+    <ex:secondaryColor>Black</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">48</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>OutOfStock</ex:availability>
+    <ex:available_sizes>M | L | XL</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/5f7ec52cf17d48548bc524e5889be0a5_9366/Pantalon_de_survetement_motif_monogramme_Firebird_Noir_II8163_21_model.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000015">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Vetement</ex:productType>
+    <ex:type>Pantalon</ex:type>
+    <ex:productName>PANTALON DE SURVÊTEMENT OVERSIZE ADILENIUM</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000015</ex:model>
+    <ex:mainColor>Red</ex:mainColor>
+    <ex:secondaryColor>White</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">66</ex:price>
+    <ex:sex>Femme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>2XS | XS | M | L | XL</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/12ea60bf98c244bf9d9edd8a6bbe988b_9366/Pantalon_de_survetement_oversize_Adilenium_Rouge_IV9315_21_model.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>  
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000016">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Vetement</ex:productType>
+    <ex:type>Pantalon</ex:type>
+    <ex:productName>PANTALON ADIBREAK</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000016</ex:model>
+    <ex:mainColor>Black</ex:mainColor>
+    <ex:secondaryColor>White</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">75</ex:price>
+    <ex:sex>Femme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>2XS | XS | S | L | XL</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/f842f756da234222b87066b44b58fc16_9366/Pantalon_Adibreak_Noir_IU2519_21_model.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>  
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000017">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Vetement</ex:productType>
+    <ex:type>Pantalon</ex:type>
+    <ex:productName>PANTALON DE SURVÊTEMENT ADICOLOR SST</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000017</ex:model>
+    <ex:mainColor>Blue</ex:mainColor>
+    <ex:secondaryColor>White</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">65</ex:price>
+    <ex:sex>Femme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>2XS | XS | S | M | L</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/fc7b0187d4484c08b96642763b736193_9366/Pantalon_de_survetement_Adicolor_SST_Bleu_IL8817_21_model.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description> 
+  
+  <rdf:Description rdf:about="http://example.org/resource/product/15000018">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Vetement</ex:productType>
+    <ex:type>Pantalon</ex:type>
+    <ex:productName>PANTALON DE SURVÊTEMENT DÉCONTRACTÉ PREMIUM ESSENTIALS MADE TO BE REMADE</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000018</ex:model>
+    <ex:mainColor>Grey</ex:mainColor>
+    <ex:secondaryColor>Grey</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">65</ex:price>
+    <ex:sex>Femme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>S | M | L | XL</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/ff012bc7121f443db0f1afc900985465_9366/Pantalon_de_survetement_decontracte_Premium_Essentials_Made_To_Be_Remade_Gris_IL0851_21_model.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description> 
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000019">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Vetement</ex:productType>
+    <ex:type>Pantalon</ex:type>
+    <ex:productName>PANTALON DE SURVÊTEMENT ADICOLOR CLASSICS LOCK-UP</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000019</ex:model>
+    <ex:mainColor>Black</ex:mainColor>
+    <ex:secondaryColor>White</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">49</ex:price>
+    <ex:sex>Femme</ex:sex>
+    <ex:availability>OutOfStock</ex:availability>
+    <ex:available_sizes>S | M | L</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/fab22a74505d478c8f80af0301257427_9366/Pantalon_de_survetement_Adicolor_Classics_Lock-Up_Noir_IB7442_21_model.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description> 
+
+<!-- SWEAT Adidas -->
+  <rdf:Description rdf:about="http://example.org/resource/product/15000020">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Vetement</ex:productType>
+    <ex:type>Sweat</ex:type>
+    <ex:productName>SWEAT-SHIRT RAS-DU-COU TRÈFLE ESSENTIALS</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000020</ex:model>
+    <ex:mainColor>Blue</ex:mainColor>
+    <ex:secondaryColor>Blue</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">55</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>XS | S | M | L | XL</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/91d980c485e046af8ddebac1f43d8f5d_9366/Sweat-shirt_ras-du-cou_Trefle_Essentials_Bleu_IM4536_21_model.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description> 
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000021">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Vetement</ex:productType>
+    <ex:type>Sweat</ex:type>
+    <ex:productName>SWEAT-SHIRT ADICOLOR CONTEMPO CREW</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000021</ex:model>
+    <ex:mainColor>Black</ex:mainColor>
+    <ex:secondaryColor>Black</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">49</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>XS | S | M | XL</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/7025d8f9d221431087c5ae3f01503777_9366/Sweat-shirt_Adicolor_Contempo_Crew_Noir_HK0306_21_model.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>   
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000022">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Vetement</ex:productType>
+    <ex:type>Sweat</ex:type>
+    <ex:productName>SWEAT-SHIRT RAS-DU-COU ADICOLOR CLASSICS CUT LINE</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000022</ex:model>
+    <ex:mainColor>Red</ex:mainColor>
+    <ex:secondaryColor>White</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">56</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>XS | S | M | XL</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/2647c14e68e64c48b4abaf0100eecf34_9366/Sweat-shirt_ras-du-cou_Adicolor_Classics_Cut_Line_Rouge_IB9940_21_model.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description> 
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000023">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Vetement</ex:productType>
+    <ex:type>Sweat</ex:type>
+    <ex:productName>SWEAT-SHIRT RAS-DU-COU ADIDAS REKIVE</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000023</ex:model>
+    <ex:mainColor>Grey</ex:mainColor>
+    <ex:secondaryColor>Grey</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">38</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>XS | S | L</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/e081ae5f1c1f48e2968baea70082efab_9366/Sweat-shirt_ras-du-cou_adidas_Rekive_Gris_HN5527_25_model.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000024">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Vetement</ex:productType>
+    <ex:type>Sweat</ex:type>
+    <ex:productName>SWEAT-SHIRT ADICOLOR CONTEMPO CREW</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000024</ex:model>
+    <ex:mainColor>Green</ex:mainColor>
+    <ex:secondaryColor>Green</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">48</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>S | M | L | XL</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/2f2bcb0d590f431a93a66d76bfc9a945_9366/Sweat-shirt_Adicolor_Contempo_Crew_Vert_IM2113_21_model.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000025">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Vetement</ex:productType>
+    <ex:type>Sweat</ex:type>
+    <ex:productName>SWEAT-SHIRT RAS-DU-COU ADICOLOR ESSENTIALS</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000025</ex:model>
+    <ex:mainColor>Black</ex:mainColor>
+    <ex:secondaryColor>Black</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">55</ex:price>
+    <ex:sex>Femme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>S | M | L | XL</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/3532ca10a43745f59ea7af0900f5dc12_9366/Sweat-shirt_ras-du-cou_Adicolor_Essentials_Noir_IA6504_21_model.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000026">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Vetement</ex:productType>
+    <ex:type>Sweat</ex:type>
+    <ex:productName>SWEAT-SHIRT 1/2 ZIP ESSENTIALS</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000026</ex:model>
+    <ex:mainColor>White</ex:mainColor>
+    <ex:secondaryColor>White</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">60</ex:price>
+    <ex:sex>Femme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>XS | M | L</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/c107a0b3f2514a14849215ceeb33c393_9366/Sweat-shirt_1-2_zip_Essentials_Blanc_IR5940_21_model.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000027">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Vetement</ex:productType>
+    <ex:type>Sweat</ex:type>
+    <ex:productName>SWEAT-SHIRT OVERSIZE ADICOLOR CLASSICS</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000027</ex:model>
+    <ex:mainColor>Black</ex:mainColor>
+    <ex:secondaryColor>Black</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">56</ex:price>
+    <ex:sex>Femme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>S | M</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/257fad4e392a40ee93d70f02de7d5a03_9366/Sweat-shirt_oversize_Adicolor_Classics_Noir_IK6605_21_model.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000028">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Vetement</ex:productType>
+    <ex:type>Sweat</ex:type>
+    <ex:productName>SWEAT-SHIRT OVERSIZE À COL MONTANT ADICOLOR NEUCLASSICS</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000028</ex:model>
+    <ex:mainColor>Violet</ex:mainColor>
+    <ex:secondaryColor>Violet</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">56</ex:price>
+    <ex:sex>Femme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>S | M</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/274047ac8e05469fb83ec430bdab2663_9366/Sweat-shirt_oversize_a_col_montant_Adicolor_Neuclassics_Violet_IP6512_21_model.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000029">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Vetement</ex:productType>
+    <ex:type>Sweat</ex:type>
+    <ex:productName>SWEAT-SHIRT COL ROND OVERSIZE 3 BANDES</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000029</ex:model>
+    <ex:mainColor>Black</ex:mainColor>
+    <ex:secondaryColor>Black</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">70</ex:price>
+    <ex:sex>Femme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>S | M | L | XL</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/4c9bab39a10345a59c925eda25ec09d4_9366/Sweat-shirt_col_rond_oversize_3_bandes_Noir_IU2423_21_model.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>
+
+<!-- Chaussure Adidas -->
+  <rdf:Description rdf:about="http://example.org/resource/product/15000101">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Chaussures</ex:productType>
+    <ex:type>Sneakers</ex:type>
+    <ex:productName>CHAUSSURE BASSE GAZELLE INDOOR</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000101</ex:model>
+    <ex:mainColor>Green</ex:mainColor>
+    <ex:secondaryColor>White</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">120</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>38 | 39 | 40 | 41 | 42 | 43 | 44</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/dcefc2a08d4844229f7da8dad340bf40_9366/chaussure-basse-gazelle-indoor.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000102">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Chaussures</ex:productType>
+    <ex:type>Sneakers</ex:type>
+    <ex:productName>CHAUSSURE RUN 60S 2.0</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000102</ex:model>
+    <ex:mainColor>Black</ex:mainColor>
+    <ex:secondaryColor>White</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">60</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>38 | 39 | 40 | 41 | 42 | 43 | 44</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/f7afc9ac90024b039508ac0200fc829c_9366/chaussure-run-60s-2.0.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000103">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Chaussures</ex:productType>
+    <ex:type>Sneakers</ex:type>
+    <ex:productName>CHAUSSURE FORUM LOW</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000103</ex:model>
+    <ex:mainColor>White</ex:mainColor>
+    <ex:secondaryColor>Blue</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">120</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>38 | 39 | 40 | 41 | 42 | 43 | 44</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/ff82213b88c74ac5a0cbac5e004bd8e3_9366/chaussure-forum-low.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000104">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Chaussures</ex:productType>
+    <ex:type>Sneakers</ex:type>
+    <ex:productName>CHAUSSURE NMD S1</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000104</ex:model>
+    <ex:mainColor>Black</ex:mainColor>
+    <ex:secondaryColor>White</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">90</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>36 | 38 | 40 | 41 | 42 | 43 | 44</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/9346d6ad4e624a7687e4afaa00b437d4_9366/Chaussure_NMD_S1_Noir_GZ9799_01_standard.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000105">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Chaussures</ex:productType>
+    <ex:type>Sneakers</ex:type>
+    <ex:productName>CHAUSSURE STAN SMITH</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000105</ex:model>
+    <ex:mainColor>White</ex:mainColor>
+    <ex:secondaryColor>White</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">110</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>36 | 38 | 40 | 41 | 42 | 43 | 46</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/b47d77eba6f945ea8dabac210127b11e_9366/Chaussure_Stan_Smith_Blanc_FX5501_01_standard.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000106">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Chaussures</ex:productType>
+    <ex:type>Sneakers</ex:type>
+    <ex:productName>CHAUSSURE SAMBA OG</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000106</ex:model>
+    <ex:mainColor>White</ex:mainColor>
+    <ex:secondaryColor>Black</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">120</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>36 | 38 | 40 | 41 | 42 | 43 | 46</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/b067d21288bc43ec8298a8bf01180400_9366/Chaussure_Samba_OG_Blanc_B75806_04_standard.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000107">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Chaussures</ex:productType>
+    <ex:type>Sneakers</ex:type>
+    <ex:productName>CHAUSSURE OZELLE CLOUDFOAM</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000107</ex:model>
+    <ex:mainColor>Black</ex:mainColor>
+    <ex:secondaryColor>Black</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">40</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>42 | 43 | 46</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/fd71aad7873242a08057ae89001a64fe_9366/Chaussure_Ozelle_Cloudfoam_Noir_GX6763_01_standard.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000108">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Chaussures</ex:productType>
+    <ex:type>Sneakers</ex:type>
+    <ex:productName>CHAUSSURE CAMPUS 00S</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000108</ex:model>
+    <ex:mainColor>Black</ex:mainColor>
+    <ex:secondaryColor>Pink</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">110</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>38 | 40 | 41 | 42 | 43 | 44</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/85e1879ead9848c0a3e77475f422f8c0_9366/Chaussure_Campus_00s_Noir_ID3171_01_standard.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000109">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Chaussures</ex:productType>
+    <ex:type>Sneakers</ex:type>
+    <ex:productName>CHAUSSURE HANDBALL SPEZIAL</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000109</ex:model>
+    <ex:mainColor>Blue</ex:mainColor>
+    <ex:secondaryColor>Blue</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">110</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>38 | 40 | 41 | 42 | 43 | 44</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/82d433384c7c435f9a2fa96d0101d323_9366/Chaussure_Handball_Spezial_Bleu_BD7633_01_standard.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>  
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000110">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Chaussures</ex:productType>
+    <ex:type>Sneakers</ex:type>
+    <ex:productName>CHAUSSURE GAZELLE BOLD</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000110</ex:model>
+    <ex:mainColor>Grey</ex:mainColor>
+    <ex:secondaryColor>Pink</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">120</ex:price>
+    <ex:sex>Femme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>36 | 38 | 41 | 42 | 43 | 44</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/9fdfb502661e4b0697dbf3eb281c8249_9366/Chaussure_Gazelle_Bold_Rose_ID3739_01_standard.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>  
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000111">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Chaussures</ex:productType>
+    <ex:type>Sneakers</ex:type>
+    <ex:productName>FORUM LOW CL SHOES</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000111</ex:model>
+    <ex:mainColor>White</ex:mainColor>
+    <ex:secondaryColor>Blue</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">120</ex:price>
+    <ex:sex>Femme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>36 | 37 | 38 | 39 | 40 | 42</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/aa433c397dd249a4b391ea35ccc010e2_9366/Forum_Low_CL_Shoes_Blanc_IG3964_01_standard.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000112">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Chaussures</ex:productType>
+    <ex:type>Sneakers</ex:type>
+    <ex:productName>FORUM LOW CL SHOES</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000112</ex:model>
+    <ex:mainColor>White</ex:mainColor>
+    <ex:secondaryColor>Red</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">120</ex:price>
+    <ex:sex>Femme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>36 | 37 | 38 | 39 | 40 | 42</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/aaddfb0a0cb5445ca9368b662ce39085_9366/Forum_Low_CL_Shoes_Blanc_IG3965_01_standard.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000113">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Chaussures</ex:productType>
+    <ex:type>Sneakers</ex:type>
+    <ex:productName>CHAUSSURE ULTRABOOST 22</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000113</ex:model>
+    <ex:mainColor>Black</ex:mainColor>
+    <ex:secondaryColor>Black</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">133</ex:price>
+    <ex:sex>Femme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>39 | 40 | 42 | 46</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/fbaf991a78bc4896a3e9ad7800abcec6_9366/Chaussure_Ultraboost_22_Noir_GZ0127_01_standard.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000114">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Chaussures</ex:productType>
+    <ex:type>Sneakers</ex:type>
+    <ex:productName>CHAUSSURE HOOPS 3.0 LOW CLASSIC</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000114</ex:model>
+    <ex:mainColor>White</ex:mainColor>
+    <ex:secondaryColor>White</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">35</ex:price>
+    <ex:sex>Femme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>38 | 40 </ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/0e4c002da2bd48208c2fadc8016c90e1_9366/Chaussure_Hoops_3.0_Low_Classic_Blanc_GW3036_01_standard.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000115">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Chaussures</ex:productType>
+    <ex:type>Sneakers</ex:type>
+    <ex:productName>CHAUSSURE COURT TNS PREMIERE</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000115</ex:model>
+    <ex:mainColor>Brown</ex:mainColor>
+    <ex:secondaryColor>Blue</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">45</ex:price>
+    <ex:sex>Femme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>40 | 42 | 44</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/968236fc10894e419d53af9e001d06ae_9366/Chaussure_Court_TNS_Premiere_Marron_IG0049_01_standard.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000116">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Chaussures</ex:productType>
+    <ex:type>Sneakers</ex:type>
+    <ex:productName>CHAUSSURE NORA</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000116</ex:model>
+    <ex:mainColor>White</ex:mainColor>
+    <ex:secondaryColor>Green</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">50</ex:price>
+    <ex:sex>Femme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>36 | 38 | 40 | 42 | 44</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/6257fece3e6845f98f353b5711cb0b06_9366/Chaussure_Nora_Blanc_IG5269_01_standard.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>
+
+<!-- Accessoires Adidas -->
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000201">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Accessoires</ex:productType>
+    <ex:type>Sac</ex:type>
+    <ex:productName>SAC À DOS 4ATHLTS CAMPER</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000201</ex:model>
+    <ex:mainColor>Black</ex:mainColor>
+    <ex:secondaryColor>Black</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">45</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>L</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/91e5927d451940068649ad9a007ad06e_9366/Sac_a_dos_4ATHLTS_Camper_Noir_HC7269_01_standard.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000202">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Accessoires</ex:productType>
+    <ex:type>Sac</ex:type>
+    <ex:productName>SAC À DOS ADICOLOR</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000202</ex:model>
+    <ex:mainColor>Black</ex:mainColor>
+    <ex:secondaryColor>White</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">40</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>M</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/6ce6edf2d8c34ed8ab39fdca2b5b7e4b_9366/Sac_a_dos_Power_Noir_IP9774_01_standard.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000203">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Accessoires</ex:productType>
+    <ex:type>Sac</ex:type>
+    <ex:productName>SAC À DOS ADICOLOR</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000203</ex:model>
+    <ex:mainColor>Blue</ex:mainColor>
+    <ex:secondaryColor>White</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">17</ex:price>
+    <ex:sex>Femme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>S</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/ff41b5b2b50f4d378257ae7700565385_9366/Sac_a_dos_Adicolor_Bleu_HS6970_01_standard.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000204">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Accessoires</ex:productType>
+    <ex:type>Sac</ex:type>
+    <ex:productName>SAC EN TOILE ESSENTIALS LINEAR FORMAT MOYEN</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000204</ex:model>
+    <ex:mainColor>Black</ex:mainColor>
+    <ex:secondaryColor>White</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">35</ex:price>
+    <ex:sex>Femme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>M</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/881a82f568ce4ca38135af2a00a8d72d_9366/Sac_en_toile_Essentials_Linear_Format_moyen_Noir_HT4743_01_standard.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000205">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Accessoires</ex:productType>
+    <ex:type>Chaussettes</ex:type>
+    <ex:productName>CHAUSSETTES MATELASSÉES (3 PAIRES)</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000205</ex:model>
+    <ex:mainColor>White</ex:mainColor>
+    <ex:secondaryColor>Black</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">13</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>38 | 42</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/7c9bdfc622db4a7cbf91af1200b0264c_9366/Chaussettes_matelassees_3_paires_Blanc_HT3446_03_standard.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000206">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Accessoires</ex:productType>
+    <ex:type>Chaussettes</ex:type>
+    <ex:productName>CHAUSSETTES MATELASSÉES BLACK (3 PAIRES)</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000206</ex:model>
+    <ex:mainColor>Black</ex:mainColor>
+    <ex:secondaryColor>White</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">13</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>38 | 42</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/32a522154aa94ff6b80caf27009e4690_9366/Chaussettes_matelassees_3_paires_Noir_IC1310_03_standard.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000207">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Accessoires</ex:productType>
+    <ex:type>Chaussettes</ex:type>
+    <ex:productName>CHAUSSETTES MID-CUT GLITTER (2 PAIRES)</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000207</ex:model>
+    <ex:mainColor>White</ex:mainColor>
+    <ex:secondaryColor>Pink</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">15</ex:price>
+    <ex:sex>Femme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>38 | 41</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/1889c2230a7043778f83ae3f01381bd6_9366/Chaussettes_Mid-Cut_Glitter_2_paires_Blanc_HK0301_03_standard.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000208">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Accessoires</ex:productType>
+    <ex:type>Chaussettes</ex:type>
+    <ex:productName>CHAUSSETTES UNIES (LOT DE 3 PAIRES)</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000208</ex:model>
+    <ex:mainColor>White</ex:mainColor>
+    <ex:secondaryColor>Green</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">15</ex:price>
+    <ex:sex>Femme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>35 | 38 | 41</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/d1eb25ce3db94cfeb122c092d2eabb56_9366/Chaussettes_unies_lot_de_3_paires_Blanc_IU2656_03_standard.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000209">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Accessoires</ex:productType>
+    <ex:type>Bonnet</ex:type>
+    <ex:productName>BONNET ADICOLOR CUFF</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000209</ex:model>
+    <ex:mainColor>Black</ex:mainColor>
+    <ex:secondaryColor>White</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">23</ex:price>
+    <ex:sex>Homme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>S | M</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/f1b5d6c6da444b97bce9aa250100578a_9366/Bonnet_Adicolor_Cuff_Noir_ED8712_01_standard.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/15000210">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Accessoires</ex:productType>
+    <ex:type>Bonnet</ex:type>
+    <ex:productName>BONNET FAUX FUR POMPOM</ex:productName>
+    <ex:productBrand>Adidas</ex:productBrand>
+    <ex:model>15000210</ex:model>
+    <ex:mainColor>Black</ex:mainColor>
+    <ex:secondaryColor>Black</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20</ex:price>
+    <ex:sex>Femme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>S | M</ex:available_sizes>
+    <ex:image>https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/51e7588c0e84405c92d5ad10011523b2_9366/Bonnet_Faux_Fur_Pompom_Noir_H35531_01_standard.jpg</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/adidas"/>
+  </rdf:Description>
+
+<!-- Produits Lacoste -->
+
+<!-- Produits Timberland -->
+<!-- Chaussure Timberland -->
+  <rdf:Description rdf:about="http://example.org/resource/product/16000101">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Chaussures</ex:productType>
+    <ex:type>Bottes</ex:type>
+    <ex:productName>BOTTINE À LACETS 6-INCH TIMBERLAND SKY POUR FEMME EN JAUNE</ex:productName>
+    <ex:productBrand>Timberland</ex:productBrand>
+    <ex:model>16000101</ex:model>
+    <ex:mainColor>Yellow</ex:mainColor>
+    <ex:secondaryColor>Black</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">85</ex:price>
+    <ex:sex>Femme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>38 | 39 | 40 | 41 | 42 </ex:available_sizes>
+    <ex:image>https://img01.ztat.net/article/spp-media-p1/7c12e106c4714629b7f9174b13dfc87c/0b0518f7284d404c94ec3109e475dca6.jpg?imwidth=762</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/timberland"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://example.org/resource/product/16000103">
+    <rdf:type rdf:resource="http://example.org/ontology#Product"/>
+    <ex:productType>Chaussures</ex:productType>
+    <ex:type>Bottes</ex:type>
+    <ex:productName>BOTTINE LYONSDALE POUR FEMME EN BEIGE</ex:productName>
+    <ex:productBrand>Timberland</ex:productBrand>
+    <ex:model>16000103</ex:model>
+    <ex:mainColor>Beige</ex:mainColor>
+    <ex:secondaryColor>Beige</ex:secondaryColor>
+    <ex:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">120</ex:price>
+    <ex:sex>Femme</ex:sex>
+    <ex:availability>InStock</ex:availability>
+    <ex:available_sizes>36 | 37 | 40 | 41 </ex:available_sizes>
+    <ex:image>https://img01.ztat.net/article/spp-media-p1/f6b2aff8a51c4b499d3130e471fc8b8b/a5a2c52186034ce58405fa3aeda40f3e.jpg?imwidth=1800</ex:image>
+    <!-- Relation isMadeBy -->
+    <ex:isMadeBy rdf:resource="http://example.org/resource/brand/timberland"/>
+  </rdf:Description>
+
+
+
+</rdf:RDF>
